@@ -1,0 +1,11 @@
+backup/
+catkin_ws/.catkin_tools
+catkin_ws/build
+catkin_ws/devel
+catkin_ws/logs
+homedir/.cache
+homedir/.config
+homedir/.local
+homedir/.ros
+homedir/.local
+homedir/.bash_history

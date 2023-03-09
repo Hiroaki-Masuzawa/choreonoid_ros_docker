@@ -17,4 +17,4 @@ $SUDO docker run --rm -it \
     -v $SCRIPT_DIR/..:/workdir \
     -w /workdir \
     --name choreonoid_ros \
-    choreonoid_ros bash
+    choreonoid_ros bash -c "cd ~/catkin_ws; catkin build"

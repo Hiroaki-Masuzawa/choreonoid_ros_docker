@@ -18,8 +18,8 @@ $ roslaunch choreonoid_ros_control_sample bringup.launch
 ```
 [Terminal 2]
 $ cd choreonoid_ros
-$ ./run.sh
-$rostopic pub -1 /simple_leg/Hip_position_controller/command std_msgs/Float64 -- -0.785
+$ ./exec.sh
+$ rostopic pub -1 /simple_leg/Hip_position_controller/command std_msgs/Float64 -- -0.785
 ```
 
 ## Reference

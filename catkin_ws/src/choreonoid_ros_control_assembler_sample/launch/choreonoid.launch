@@ -1,0 +1,10 @@
+<launch>
+  <arg name="project_file" default="AssembleRobot.cnoid"/>
+  <!-- Choreonoid on ROS -->
+  <include file="$(find choreonoid_ros)/launch/choreonoid.launch">
+    <arg name="choreonoid_arg" value="$(find choreonoid_ros_control_assembler_sample)/project/$(arg project_file)"/>
+  </include>
+
+  <!-- ROS Control -->
+  <include file="$(find choreonoid_ros_control_assembler_sample)/launch/control.launch"/>
+</launch>

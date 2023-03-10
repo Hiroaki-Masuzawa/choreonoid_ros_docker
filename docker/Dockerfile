@@ -33,3 +33,4 @@ libgstreamer-plugins-base1.0-dev \
 ros-noetic-image-transport ros-noetic-angles ros-noetic-ros-controllers \
 ros-noetic-joint-limits-interface ros-noetic-transmission-interface \
 ros-noetic-urdf-tutorial
+RUN apt install -y liburdfdom-tools

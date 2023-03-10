@@ -27,7 +27,7 @@
             ```
             <xacro:joint_position_trans_v0 name="LINK_0"/>
             ```
-        
+    注意 : 単位系がmであることに注意する．また，読み込む対象のメッシュも単位系がmでないといけないことに注意する．  
 
 1. 位置制御用のconfigを作成する．(choreonoid_ros_control_assembler_sample/config/coint_control.yaml)
 1. プロジェクトファイルを作成する．(choreonoid_ros_control_assembler_sample//projectAssembleRobot.cnoid)

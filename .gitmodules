@@ -4,9 +4,6 @@
 [submodule "catkin_ws/src/choreonoid_ros"]
 	path = catkin_ws/src/choreonoid_ros
 	url = https://github.com/choreonoid/choreonoid_ros.git
-[submodule "catkin_ws/src/choreonoid_ros_control"]
-	path = catkin_ws/src/choreonoid_ros_control
-	url = https://github.com/RyodoTanaka/choreonoid_ros_control.git
 [submodule "catkin_ws/src/choreonoid_ros_control_sample"]
 	path = catkin_ws/src/choreonoid_ros_control_sample
 	url = https://github.com/falfang/choreonoid_ros_control_sample.git

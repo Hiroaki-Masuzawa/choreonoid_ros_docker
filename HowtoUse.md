@@ -22,7 +22,9 @@
             ```
         
     1. 制御を行いたいjointについて，xacroの最後に以下のように追記する．
-        'LINK_0'を制御したい場合```
+        'LINK_0'を制御したい場合
+        
+            ```
             <xacro:joint_position_trans_v0 name="LINK_0"/>
             ```
         

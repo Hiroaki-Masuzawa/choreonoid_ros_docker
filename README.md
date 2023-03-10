@@ -36,6 +36,6 @@ points:
 ```
 
 ## Reference
-[choreonoid_ros_controlを自分のロボットに適用してみた話](https://qiita.com/FAL19/items/7b4a491e2399aa5cf7c9)
-[ros_control連携版 Tankチュートリアル](https://choreonoid.org/ja/manuals/latest/ros/ros-control/index.html)
-[cnoid_tank_pkgs](https://github.com/choreonoid/cnoid_tank_pkgs)
+- [choreonoid_ros_controlを自分のロボットに適用してみた話](https://qiita.com/FAL19/items/7b4a491e2399aa5cf7c9)
+- [ros_control連携版 Tankチュートリアル](https://choreonoid.org/ja/manuals/latest/ros/ros-control/index.html)
+- [cnoid_tank_pkgs](https://github.com/choreonoid/cnoid_tank_pkgs)

@@ -1,19 +1,7 @@
 <?xml version="1.0" ?>
 <robot name="test_robot" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <!-- copy from cnoid_tank_pkgs/cnoid_tank_description/urdf/common.xacro -->
-  <xacro:property name="M_PI" value="3.14159274"/>
-  <xacro:macro name="joint_position_trans_v0" params="name">
-	<transmission name="${name}_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${name}">
-		<hardwareInterface>PositionJointInterface</hardwareInterface>
-      </joint>
-	  <actuator name="${name}_motor">
-		<hardwareInterface>PositionJointInterface</hardwareInterface>
-      </actuator>
-	</transmission>
-  </xacro:macro>
+  <xacro:include filename="$(find choreonoid_ros_control_assembler_sample)/urdf/common.xacro"/>
 
   <link name="Root">
     <visual>

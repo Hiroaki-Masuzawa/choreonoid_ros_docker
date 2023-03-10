@@ -1,5 +1,5 @@
 <launch>
-  <arg name="model" default="$(find choreonoid_ros_control_assembler_sample)/model/one_joint_robot.xacro"/>
+  <arg name="model" default="$(find choreonoid_ros_control_assembler_sample)/urdf/one_joint_robot.xacro"/>
 
   <!-- robot description -->
   <param name="/AssembleRobot/robot_description" command="$(find xacro)/xacro '$(arg model)'"/>

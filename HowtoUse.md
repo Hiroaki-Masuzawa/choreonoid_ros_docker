@@ -3,7 +3,7 @@
 1. RobotAssemblerでロボットを組み立て，bodyファイルを保存する．(choreonoid_ros_control_assembler_sample/model/one_joint_robot.body)
 1. bodyファイルを基にxacroファイルを作成する．(choreonoid_ros_control_assembler_sample/model/one_joint_robot.xacro)
     1. bodyファイルはlink_1->link_2->link_3の構造のため，それをlink_1->joint_a->link_2->joint_b->link3の形に書き直す．その際にxacro内のjointタブのnameプロパティとlinkタブのnameプロパティはかぶって構わない（ようだ）．
-    1. xacroファイルの先頭に以下のマクロを記載する．
+    1. xacroファイルの先頭に以下のマクロを記載する．(もしくは，別ファイルにしてincludeする)
         
         位置制御用マクロ
 

@@ -4,8 +4,9 @@
 1. bodyファイルを基にxacroファイルを作成する．(choreonoid_ros_control_assembler_sample/model/one_joint_robot.xacro)
     1. bodyファイルはlink_1->link_2->link_3の構造のため，それをlink_1->joint_a->link_2->joint_b->link3の形に書き直す．その際にxacro内のjointタブのnameプロパティとlinkタブのnameプロパティはかぶって構わない（ようだ）．
     1. xacroファイルの先頭に以下のマクロを記載する．
-        <details>
-        <summary>位置制御用マクロ</summary>
+        
+        位置制御用マクロ
+
             ```
             <xacro:macro name="joint_position_trans_v0" params="name">
             <transmission name="${name}_trans">
@@ -19,14 +20,12 @@
             </transmission>
             </xacro:macro>
             ```
-        </details>
+        
     1. 制御を行いたいjointについて，xacroの最後に以下のように追記する．
-        <details>
-        <summary>'LINK_0'を制御したい場合</summary>
-            ```
+        'LINK_0'を制御したい場合```
             <xacro:joint_position_trans_v0 name="LINK_0"/>
             ```
-        </details>
+        
 
 1. 位置制御用のconfigを作成する．(choreonoid_ros_control_assembler_sample/config/coint_control.yaml)
 1. プロジェクトファイルを作成する．(choreonoid_ros_control_assembler_sample//projectAssembleRobot.cnoid)

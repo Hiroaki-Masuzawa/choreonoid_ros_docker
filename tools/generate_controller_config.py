@@ -21,7 +21,9 @@ if __name__=='__main__':
     joint_suffix = args.jointsuffix
 
     rbody = cnoid.Body.BodyLoader().load(str(fname))
-    
+    rbody.updateLinkTree()
+    rbody.initializePosition()
+    rbody.calcForwardKinematics()
 
     rotate_joint_list = []
 

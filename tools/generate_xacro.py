@@ -17,6 +17,9 @@ if __name__=='__main__':
     fname = args.bodyfile
     joint_suffix = args.jointsuffix
     rbody = cnoid.Body.BodyLoader().load(str(fname))
+    rbody.updateLinkTree()
+    rbody.initializePosition()
+    rbody.calcForwardKinematics()
 
     num_link = rbody.getNumLinks()
     num_joint = rbody.getNumJoints()

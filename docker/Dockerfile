@@ -34,3 +34,7 @@ ros-noetic-image-transport ros-noetic-angles ros-noetic-ros-controllers \
 ros-noetic-joint-limits-interface ros-noetic-transmission-interface \
 ros-noetic-urdf-tutorial
 RUN apt install -y liburdfdom-tools
+RUN apt install -y curl
+RUN curl https://bootstrap.pypa.io/get-pip.py | python3
+RUN pip3 install numpy-quaternion
+ENV PYTHONPATH=/workdir/catkin_ws/build/choreonoid/lib/choreonoid-1.8/python:$PYTHONPATH

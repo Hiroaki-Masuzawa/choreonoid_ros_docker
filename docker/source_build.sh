@@ -17,4 +17,4 @@ $SUDO docker run --rm -it \
     -v $SCRIPT_DIR/..:/workdir \
     -w /workdir \
     --name choreonoid_ros \
-    choreonoid_ros bash -c "cd ~/catkin_ws; catkin build"
+    choreonoid_ros bash -c "cd ~/catkin_ws; catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release -DENABLE_PYTHON=ON -DUSE_PYTHON3=ON; catkin build"

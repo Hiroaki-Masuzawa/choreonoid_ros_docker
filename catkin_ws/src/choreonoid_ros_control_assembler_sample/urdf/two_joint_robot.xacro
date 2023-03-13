@@ -8,7 +8,7 @@
   <joint name="LINK_0" type="revolute">
     <parent link="Root"/>
     <child link="LINK_0"/>
-    <origin xyz="0.000000 0.000000 0.000000" rpy="0 0 0" />
+    <origin xyz="0.000000 0.000000 0.019000" rpy="0 0 0" />
     <axis xyz="0.000000 0.000000 1.000000"/>
     <limit lower="-3.141593" upper="3.141593" velocity="5" effort="500"/>
   </joint>
@@ -17,14 +17,14 @@
   <joint name="FR12_H101_S_28_2" type="fixed">
     <parent link="LINK_0"/>
     <child link="FR12_H101_S_28_2"/>
-    <origin xyz="0.000000 0.000000 0.000000" rpy="0 0 0" />
+    <origin xyz="0.008000 0.059200 -0.007000" rpy="0 0 0" />
   </joint>
   <link name="LINK_1">
   </link>
   <joint name="LINK_1" type="revolute">
     <parent link="FR12_H101_S_28_2"/>
     <child link="LINK_1"/>
-    <origin xyz="0.000000 0.000000 0.000000" rpy="0 0 0" />
+    <origin xyz="0.007000 -0.008000 0.032700" rpy="0 0 0" />
     <axis xyz="-0.000000 -0.000000 -1.000000"/>
     <limit lower="-3.141593" upper="3.141593" velocity="5" effort="500"/>
   </joint>

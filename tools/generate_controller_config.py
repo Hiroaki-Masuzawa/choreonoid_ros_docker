@@ -3,28 +3,6 @@ import numpy
 import cnoid.Body
 import cnoid.Util
 
-def print_geom (filename = '', visual = True, scale = '1 1 1', xyz = '0 0 0', rpy = '0 0 0'):
-    if visual:
-        print('    <visual>')
-    else:
-        print('    <collisionl>')
-    print('      <origin  xyz="%s" rpy="%s"/>'%(xyz, rpy))
-    print('      <geometry>')
-    print('        <mesh filename="%s" scale="%s"/>'%(filename, scale))
-    print('      </geometry>')
-    if visual:
-        print('    </visual>')
-    else:
-        print('    </collisionl>')
-
-def print_inertial (mass = 1.0, xyz = '0 0 0', rpy = '0 0 0', inertial = [1, 0, 0, 1, 0, 1]):
-    print('    <inertial>')
-    print('      <mass value="%s"/>'%(mass))
-    print('      <origin xyz="%s" rpy="%s"/>'%(xyz, rpy))
-    print('      <inertia ixx="%f" ixy="%f" ixz="%f" iyy="%f" iyz="%f" izz="%f"/>'%(inertial[0], inertial[1], inertial[2],
-                                                                                      inertial[3], inertial[4], inertial[5]))
-    print('    </inertial>')
-
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser(

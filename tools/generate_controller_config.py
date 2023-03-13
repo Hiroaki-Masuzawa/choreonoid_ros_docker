@@ -12,14 +12,16 @@ if __name__=='__main__':
             add_help=True, # -h/–help オプションの追加
             )
     parser.add_argument('--bodyfile', type=str, default="robotname.body")
+    parser.add_argument('--controllername', type=str, default="joint_controler")
+    parser.add_argument('--jointsuffix', type=str, default="")
+
     args = parser.parse_args()
-    # fname = 'robotname.body'
     fname = args.bodyfile
+    controllername = args.controllername
+    joint_suffix = args.jointsuffix
 
     rbody = cnoid.Body.BodyLoader().load(str(fname))
-    print('%s:'%rbody.getModelName())
-    print('  joint_controler:')
-    print('    type: "position_controllers/JointTrajectoryController"')
+    
 
     rotate_joint_list = []
 
@@ -34,13 +36,17 @@ if __name__=='__main__':
         if p:
             if lk.isRevoluteJoint():
                 rotate_joint_list.append(lk.getName())
+    
     if len(rotate_joint_list)>0:
+        print('%s:'%rbody.getModelName())
+        print('  %s:'%controllername)
+        print('    type: "position_controllers/JointTrajectoryController"')
         print("    joints:")
         for joint in rotate_joint_list:
-            print('      - %s'%joint)
+            print('      - %s%s'%(joint, joint_suffix))
         print("    gains:")
         for joint in rotate_joint_list:
-            print('      %s:'%joint)
+            print('      %s%s:'%(joint, joint_suffix))
             print('        p: 100')
             print('        i: 10')
             print('        d: 1')

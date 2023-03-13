@@ -26,7 +26,9 @@ def print_inertial (mass = 1.0, xyz = '0 0 0', rpy = '0 0 0', inertial = [1, 0, 
 
 fname = 'catkin_ws/src/choreonoid_ros_control_assembler_sample/model/one_joint_robot.body'
 rbody = cnoid.Body.BodyLoader().load(str(fname))
-
+rbody.updateLinkTree()
+rbody.initializePosition()
+rbody.calcForwardKinematics()
 num_link = rbody.getNumLinks()
 num_joint = rbody.getNumJoints()
 
@@ -53,10 +55,8 @@ for idx in range(num_link):
         print(lk.getJointType())
         axis  = lk.getJointAxis()
         l_trans = lk.getTranslation()
-        print("debug1 {} {}".format(l_trans, lk.translation))
         l_rot   = lk.getRotation()
         p_trans =  p.getTranslation()
-        print("debug2 {} {}".format(p_trans, p.translation))
         p_rot   =  p.getRotation()
 
         p_inv_rot = numpy.transpose(p_rot)

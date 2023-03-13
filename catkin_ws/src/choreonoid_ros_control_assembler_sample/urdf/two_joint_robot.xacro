@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+  <robot name="AssembleRobot" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find choreonoid_ros_control_assembler_sample)/urdf/common.xacro"/>
+  <link name="Root">
+  </link>
+  <link name="LINK_0">
+  </link>
+  <joint name="LINK_0" type="revolute">
+    <parent link="Root"/>
+    <child link="LINK_0"/>
+    <origin xyz="0.000000 0.000000 0.000000" rpy="0 0 0" />
+    <axis xyz="0.000000 0.000000 1.000000"/>
+    <limit lower="-3.141593" upper="3.141593" velocity="5" effort="500"/>
+  </joint>
+  <link name="FR12_H101_S_28_2">
+  </link>
+  <joint name="FR12_H101_S_28_2" type="fixed">
+    <parent link="LINK_0"/>
+    <child link="FR12_H101_S_28_2"/>
+    <origin xyz="0.000000 0.000000 0.000000" rpy="0 0 0" />
+  </joint>
+  <link name="LINK_1">
+  </link>
+  <joint name="LINK_1" type="revolute">
+    <parent link="FR12_H101_S_28_2"/>
+    <child link="LINK_1"/>
+    <origin xyz="0.000000 0.000000 0.000000" rpy="0 0 0" />
+    <axis xyz="-0.000000 -0.000000 -1.000000"/>
+    <limit lower="-3.141593" upper="3.141593" velocity="5" effort="500"/>
+  </joint>
+  <!-- Transmission -->
+  <xacro:joint_position_trans_v0 name="LINK_0"/>
+  <xacro:joint_position_trans_v0 name="LINK_1"/>
+</robot>

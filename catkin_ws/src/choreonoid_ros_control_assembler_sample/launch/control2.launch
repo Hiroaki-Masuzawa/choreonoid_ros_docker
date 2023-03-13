@@ -1,0 +1,16 @@
+<launch>
+  <arg name="model" default="$(find choreonoid_ros_control_assembler_sample)/urdf/two_joint_robot.xacro"/>
+
+  <!-- robot description -->
+  <param name="/AssembleRobot/robot_description" command="$(find xacro)/xacro '$(arg model)'"/>
+   
+  <!-- state publisher -->
+  <node ns="AssembleRobot" name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true"/>
+  
+  <!-- load the controllers -->
+  <rosparam file="$(find choreonoid_ros_control_assembler_sample)/config/joint_control2.yaml" command="load"/>
+  <node name="robot_controller_spawner" pkg="controller_manager"
+		type="spawner" output="screen" respawn="true"
+		args="--namespace AssembleRobot
+          joint_controler"/>  
+</launch>

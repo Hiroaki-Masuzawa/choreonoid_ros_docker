@@ -1,0 +1,15 @@
+AssembleRobot:
+  joint_controler:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - LINK_0
+      - LINK_1
+    gains:
+      LINK_0:
+        p: 100
+        i: 10
+        d: 1
+      LINK_1:
+        p: 100
+        i: 10
+        d: 1

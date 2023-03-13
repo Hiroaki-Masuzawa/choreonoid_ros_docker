@@ -1,0 +1,25 @@
+history: 
+  - 
+    initial-parts: true
+    parts-name: XL-430_28_0
+    parts-type: XL-430
+  - 
+    parent: XL-430_28_0
+    parent-point: horn
+    parts-name: FR12_H103_P_28_1
+    parts-point: side_connetct_point
+    parts-type: FR12_H103_P
+  - 
+    parent: FR12_H103_P_28_1
+    parent-point: p1_0_3
+    parts-name: FR12_H101_S_28_2
+    parts-point: s1_2_3
+    parts-type: FR12_H101_S
+  - 
+    parent: FR12_H101_S_28_2
+    parent-point: side_connetct_point
+    parts-name: XL-430_28_3
+    parts-point: horn
+    parts-type: XL-430
+robot-info: 
+  name: AssembleRobot

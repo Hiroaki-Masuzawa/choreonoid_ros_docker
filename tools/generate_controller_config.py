@@ -1,7 +1,15 @@
 import argparse
 import numpy
-import cnoid.Body
-import cnoid.Util
+
+try:
+    import cnoid.Body
+    import cnoid.Util
+except ImportError:
+    import sys 
+    sys.path.append('/choreonoid_ws/install/lib/choreonoid-1.8/python')
+    import cnoid.Body
+    import cnoid.Util
+
 
 
 if __name__=='__main__':

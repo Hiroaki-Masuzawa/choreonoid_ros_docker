@@ -44,7 +44,8 @@ if __name__=='__main__':
                 rotate_joint_list.append(lk.getName())
     
     if len(rotate_joint_list)>0:
-        print('%s:'%(joint))
-        print('  ID: 0')
-        print('  Return_Delay_Time: 10')
-        print('  Operating_Mode: 3')
+        for joint in rotate_joint_list:
+            print('%s:'%(joint))
+            print('  ID: 0')
+            print('  Return_Delay_Time: 10')
+            print('  Operating_Mode: 3')

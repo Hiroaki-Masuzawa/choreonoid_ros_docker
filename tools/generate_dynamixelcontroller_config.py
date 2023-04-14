@@ -23,8 +23,6 @@ if __name__=='__main__':
 
     args = parser.parse_args()
     fname = args.bodyfile
-    controllername = args.controllername
-    joint_suffix = args.jointsuffix
 
     rbody = cnoid.Body.BodyLoader().load(str(fname))
     rbody.updateLinkTree()

@@ -30,7 +30,7 @@ if __name__=='__main__':
 
 
     template_filename = args.templatefile
-    p =pathlib.Path(args.bodyfile)
+    p = pathlib.Path(args.bodyfile)
     bodyfile_path =  str(p.resolve())
     robotname = rbody.getModelName()
     offset_x = args.offsetx
